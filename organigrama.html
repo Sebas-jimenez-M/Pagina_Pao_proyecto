@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organigrama - Fundación RPC</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        :root {
+            --bs-primary: #997277;
+            --bs-secondary: #ae8a8c;
+            --bs-info: #ccbeb5;
+            --bs-dark: #2c2a2b;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            color: var(--bs-dark);
+            background-color: #fdfaf6;
+        }
+
+        .bg-primary-custom { background-color: var(--bs-primary) !important; color: white; }
+        .bg-secondary-custom { background-color: var(--bs-secondary) !important; color: white; }
+        .bg-beige-custom { background-color: var(--bs-info) !important; color: var(--bs-dark); }
+        .bg-dark-custom { background-color: var(--bs-dark) !important; color: white; }
+
+        .navbar-brand img {
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        /* Org Chart Styles */
+        .org-node {
+            background-color: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--bs-primary);
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .org-node-blue { border-top-color: #5c84ba; background-color: #f0f4f8; }
+        .org-node-purple { border-top-color: #a482b8; background-color: #f4eef7; }
+        .org-node-green { border-top-color: #8acb9e; background-color: #eaf5ee; }
+        .org-node-pink { border-top-color: #f0a3c4; background-color: #fcecf3; }
+
+        .org-line-vertical {
+            width: 2px;
+            height: 30px;
+            background-color: #cbd5e1;
+            margin: 0 auto;
+        }
+
+        .org-line-horizontal {
+            height: 2px;
+            background-color: #cbd5e1;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .org-container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand py-0" href="index.html">
+                <img src="assets/logo_nav.jpg" alt="Logo RPC">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center fw-semibold text-uppercase" style="font-size: 0.9rem; letter-spacing: 0.5px;">
+                    <li class="nav-item"><a class="nav-link text-dark px-2" href="index.html#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-2" href="index.html#historia">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-2" href="organigrama.html">Organigrama</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-2" href="voluntariado.html">Voluntariado</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark px-2" href="donar.html">Donar</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-danger px-4 rounded-pill fw-bold shadow-sm" href="ayuda.html">
+                            <i class="bi bi-exclamation-triangle-fill me-1"></i> Ayuda Urgente
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark text-uppercase" style="letter-spacing: 1px;">Estructura Organizacional</h2>
+            <div class="mx-auto bg-primary-custom mt-3" style="width: 60px; height: 3px;"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 text-center org-container">
+                
+                <!-- PATRONATO -->
+                <div class="org-node org-node-blue d-inline-block px-4 py-3" style="max-width: 800px;">
+                    <h5 class="fw-bold mb-2">PATRONATO / JUNTA DIRECTIVA</h5>
+                    <div class="small text-muted d-flex flex-wrap justify-content-center gap-2">
+                        <span><strong>Presidenta:</strong> Jenifer</span> |
+                        <span><strong>Vicepresidenta:</strong> Paulina</span> |
+                        <span><strong>Secretario:</strong> Andree</span> |
+                        <span><strong>Tesorero:</strong> Valeria</span> |
+                        <span><strong>Vocal:</strong> Diego</span>
+                    </div>
+                </div>
+
+                <div class="org-line-vertical position-relative">
+                    <!-- CONSEJO ASESOR -->
+                    <div class="position-absolute" style="left: 20px; top: 50%; transform: translateY(-50%); white-space: nowrap;">
+                        <div class="d-flex align-items-center">
+                            <div style="width: 20px; height: 2px; background-color: #cbd5e1;"></div>
+                            <div class="org-node org-node-purple d-inline-block ms-1 p-2 text-start shadow-sm">
+                                <h6 class="fw-bold mb-1" style="font-size: 0.9rem;">Consejo Asesor / Científico</h6>
+                                <div class="small text-muted" style="font-size: 0.8rem;">Asesora científica: Fernanda</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DIRECCION EJECUTIVA -->
+                <div class="org-node org-node-green d-inline-block px-5 py-3 mb-4">
+                    <h5 class="fw-bold mb-1">DIRECCIÓN EJECUTIVA / GENERAL</h5>
+                    <div class="small text-muted">Directora Ejecutiva: Jenifer</div>
+                </div>
+
+                <!-- TREE BRANCHES -->
+                <div class="row gx-2 gx-md-4 position-relative pt-4">
+                    <!-- Horizontal Line -->
+                    <div class="position-absolute w-100" style="top: 0; left: 0; padding: 0 16.66%;">
+                        <div style="height: 2px; background-color: #cbd5e1; width: 100%;"></div>
+                        <!-- Drop lines -->
+                        <div style="position: absolute; left: 0; top: 0; width: 2px; height: 24px; background-color: #cbd5e1;"></div>
+                        <div style="position: absolute; left: 50%; top: 0; width: 2px; height: 24px; background-color: #cbd5e1; transform: translateX(-50%);"></div>
+                        <div style="position: absolute; right: 0; top: 0; width: 2px; height: 24px; background-color: #cbd5e1;"></div>
+                    </div>
+                    <!-- Connection from Director -->
+                    <div class="position-absolute" style="top: -24px; left: 50%; width: 2px; height: 24px; background-color: #cbd5e1; transform: translateX(-50%);"></div>
+
+                    <!-- AREA 1: PROYECTOS -->
+                    <div class="col-4 d-flex flex-column align-items-center">
+                        <div class="org-node org-node-green w-100 mb-4 p-3">
+                            <h6 class="fw-bold mb-1" style="font-size: 0.85rem;">ÁREA DE PROYECTOS Y PROGRAMAS</h6>
+                            <div class="small text-muted" style="font-size: 0.8rem;">Coordinadora: Paulina</div>
+                        </div>
+                        
+                        <div class="w-100 position-relative d-flex flex-column align-items-center gap-3">
+                            <!-- Line connecting down -->
+                            <div class="position-absolute" style="top: -24px; left: 50%; width: 2px; height: 100%; background-color: #cbd5e1; transform: translateX(-50%); z-index: 1;"></div>
+                            
+                            <div class="org-node org-node-pink w-75 p-2 text-center shadow-sm">
+                                <div class="fw-bold" style="font-size: 0.8rem;">Técnico de Campo 1</div>
+                                <div class="small text-muted" style="font-size: 0.75rem;">Sofía</div>
+                            </div>
+                            
+                            <div class="org-node org-node-pink w-75 p-2 text-center shadow-sm">
+                                <div class="fw-bold" style="font-size: 0.8rem;">Técnico de Campo 2</div>
+                                <div class="small text-muted" style="font-size: 0.75rem;">Carlos</div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center mt-3 position-relative" style="z-index: 2;">
+                                <div class="org-node org-node-pink p-3 text-center shadow-sm" style="margin-right: 20px;">
+                                    <div class="fw-bold" style="font-size: 0.8rem;">Coordinadora de Voluntariado</div>
+                                    <div class="small text-muted" style="font-size: 0.75rem;">Fernanda</div>
+                                </div>
+                                
+                                <!-- Horizontal connection to volunteers -->
+                                <div class="position-absolute" style="right: -40px; top: 50%; width: 40px; height: 2px; background-color: #cbd5e1; z-index: 1;"></div>
+                                
+                                <div class="org-node org-node-pink p-2 text-start shadow-sm position-absolute" style="left: 100%; top: 50%; transform: translateY(-50%); width: 140px;">
+                                    <div class="fw-bold mb-1" style="font-size: 0.8rem;">Equipo de Voluntarios</div>
+                                    <ul class="mb-0 ps-3 small text-muted" style="font-size: 0.75rem;">
+                                        <li>Mariana</li>
+                                        <li>Luis</li>
+                                        <li>Daniela</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AREA 2: RECAUDACION -->
+                    <div class="col-4 d-flex flex-column align-items-center">
+                        <div class="org-node org-node-green w-100 mb-4 p-3">
+                            <h6 class="fw-bold mb-1" style="font-size: 0.85rem;">ÁREA DE RECAUDACIÓN DE FONDOS Y COM.</h6>
+                            <div class="small text-muted" style="font-size: 0.8rem;">Coordinador: Andree</div>
+                        </div>
+                        
+                        <div class="w-100 position-relative d-flex flex-column align-items-center gap-3">
+                            <div class="position-absolute" style="top: -24px; left: 50%; width: 2px; height: calc(100% - 20px); background-color: #cbd5e1; transform: translateX(-50%); z-index: 1;"></div>
+                            
+                            <div class="org-node org-node-pink w-75 p-2 text-center shadow-sm">
+                                <div class="fw-bold" style="font-size: 0.8rem;">Coord. de Fundraising</div>
+                                <div class="small text-muted" style="font-size: 0.75rem;">Andree</div>
+                            </div>
+                            
+                            <div class="org-node org-node-pink w-75 p-2 text-center shadow-sm">
+                                <div class="fw-bold" style="font-size: 0.8rem;">Resp. de Comunicación</div>
+                                <div class="small text-muted" style="font-size: 0.75rem;">Valeria</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AREA 3: ADMINISTRACION -->
+                    <div class="col-4 d-flex flex-column align-items-center">
+                        <div class="org-node org-node-green w-100 mb-4 p-3">
+                            <h6 class="fw-bold mb-1" style="font-size: 0.85rem;">ÁREA DE ADMINISTRACIÓN Y FINANZAS</h6>
+                            <div class="small text-muted" style="font-size: 0.8rem;">Coordinadora: Daniela</div>
+                        </div>
+                        
+                        <div class="w-100 position-relative d-flex flex-column align-items-center gap-3">
+                            <div class="position-absolute" style="top: -24px; left: 50%; width: 2px; height: calc(100% - 20px); background-color: #cbd5e1; transform: translateX(-50%); z-index: 1;"></div>
+                            
+                            <div class="org-node org-node-pink w-75 p-2 text-center shadow-sm">
+                                <div class="fw-bold" style="font-size: 0.8rem;">Contabilidad</div>
+                                <div class="small text-muted" style="font-size: 0.75rem;">Daniela</div>
+                            </div>
+                            
+                            <div class="org-node org-node-pink w-75 p-2 text-center shadow-sm">
+                                <div class="fw-bold" style="font-size: 0.8rem;">Gestión Legal y RR.HH.</div>
+                                <div class="small text-muted" style="font-size: 0.75rem;">Carlos</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
