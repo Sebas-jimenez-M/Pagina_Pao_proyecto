@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda Urgente - Fundación RPC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --bs-primary: #997277;
+            --bs-secondary: #ae8a8c;
+            --bs-info: #ccbeb5;
+            --bs-dark: #2c2a2b;
+        }
+        body { font-family: system-ui, -apple-system, sans-serif; color: var(--bs-dark); }
+        .bg-primary-custom { background-color: var(--bs-primary) !important; color: white; }
+        .text-primary-custom { color: var(--bs-primary) !important; }
+        .bg-dark-custom { background-color: var(--bs-dark) !important; color: white; }
+        .navbar-brand img { height: 50px; object-fit: contain; }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand py-0" href="index.html">
+                <img src="assets/logo_nav.jpg" alt="Logo RPC">
+            </a>
+            <div class="ms-auto">
+                <a class="btn btn-outline-secondary btn-sm rounded-pill fw-bold" href="index.html">
+                    <i class="bi bi-arrow-left"></i> Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-danger shadow-lg rounded-4 overflow-hidden">
+                    <div class="bg-danger text-white text-center py-4">
+                        <i class="bi bi-shield-exclamation display-3 mb-2 d-block"></i>
+                        <h2 class="fw-bold text-uppercase mb-0">Solicitar Ayuda Urgente</h2>
+                    </div>
+                    <div class="card-body p-4 p-md-5">
+                        <div class="alert alert-warning border-warning border-opacity-50 text-dark mb-4">
+                            <strong><i class="bi bi-incognito me-2"></i>Aviso de Seguridad:</strong> Si crees que tu agresor vigila este dispositivo, llámanos directamente al número de emergencia y borra el historial de navegación.
+                        </div>
+
+                        <div class="text-center mb-5">
+                            <p class="fs-5 fw-bold mb-2">Línea de Emergencia 24/7 (Llamada o WhatsApp)</p>
+                            <a href="tel:+524151234567" class="btn btn-danger btn-lg rounded-pill px-5 fw-bold fs-4 shadow-sm">
+                                <i class="bi bi-telephone-fill me-2"></i> 415 123 4567
+                            </a>
+                        </div>
+
+                        <hr class="mb-5">
+
+                        <h4 class="fw-bold text-danger mb-3">Formulario de Contacto Seguro</h4>
+                        <p class="text-muted mb-4">Si no puedes llamar ahora, déjanos tus datos y un método seguro para contactarte. Tu información está 100% protegida.</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">¿Cómo prefieres que te llamemos? (Nombre o seudónimo)</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Número de teléfono o contacto seguro</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">¿En qué horario es seguro contactarte?</label>
+                                <select class="form-select">
+                                    <option>Cualquier momento</option>
+                                    <option>Por la mañana (8am - 12pm)</option>
+                                    <option>Por la tarde (12pm - 6pm)</option>
+                                    <option>Por la noche (6pm - 10pm)</option>
+                                    <option>Solo por mensaje de WhatsApp</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">¿Estás en peligro inminente en este momento?</label>
+                                <select class="form-select border-danger">
+                                    <option>No, pero necesito resguardo o asesoría.</option>
+                                    <option>Sí, necesito ayuda de inmediato.</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-danger w-100 fw-bold rounded-pill p-3 fs-5">
+                                <i class="bi bi-send-fill me-2"></i> Enviar Solicitud Confidencial
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

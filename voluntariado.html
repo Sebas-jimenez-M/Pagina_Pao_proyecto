@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntariado - Fundación RPC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --bs-primary: #997277;
+            --bs-secondary: #ae8a8c;
+            --bs-info: #ccbeb5;
+            --bs-dark: #2c2a2b;
+        }
+        body { font-family: system-ui, -apple-system, sans-serif; color: var(--bs-dark); }
+        .bg-secondary-custom { background-color: var(--bs-secondary) !important; color: white; }
+        .text-secondary-custom { color: var(--bs-secondary) !important; }
+        .navbar-brand img { height: 50px; object-fit: contain; }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand py-0" href="index.html">
+                <img src="assets/logo_nav.jpg" alt="Logo RPC">
+            </a>
+            <div class="ms-auto">
+                <a class="btn btn-outline-secondary btn-sm rounded-pill fw-bold" href="index.html">
+                    <i class="bi bi-arrow-left"></i> Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                    <div class="bg-secondary-custom text-white text-center py-4">
+                        <i class="bi bi-person-hearts display-3 mb-2 d-block"></i>
+                        <h2 class="fw-bold text-uppercase mb-0">Únete al Voluntariado</h2>
+                    </div>
+                    <div class="card-body p-4 p-md-5">
+                        <p class="text-center text-muted mb-5 fs-5">Buscamos personas comprometidas con los derechos humanos y la protección de las familias. Llena el formulario y nos pondremos en contacto contigo para una entrevista.</p>
+                        
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Nombre Completo</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mt-3 mt-md-0">
+                                    <label class="form-label fw-bold">Correo Electrónico</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Teléfono de Contacto</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Perfil / Profesión</label>
+                                <select class="form-select">
+                                    <option value="" selected disabled>Selecciona una opción...</option>
+                                    <option>Psicología Clínica</option>
+                                    <option>Abogacía / Área Legal</option>
+                                    <option>Trabajo Social</option>
+                                    <option>Terapia Ocupacional / Talleres</option>
+                                    <option>Logística / Administración</option>
+                                    <option>Estudiante (Servicio Social)</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">Cuéntanos un poco sobre por qué quieres unirte a nosotros</label>
+                                <textarea class="form-control" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary w-100 fw-bold rounded-pill p-3 fs-5" style="background-color: var(--bs-secondary); border: none;">
+                                <i class="bi bi-send-fill me-2"></i> Enviar Solicitud
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

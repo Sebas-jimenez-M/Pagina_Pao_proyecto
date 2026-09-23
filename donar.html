@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar - Fundación RPC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --bs-primary: #997277;
+            --bs-secondary: #ae8a8c;
+            --bs-info: #ccbeb5;
+            --bs-dark: #2c2a2b;
+        }
+        body { font-family: system-ui, -apple-system, sans-serif; color: var(--bs-dark); }
+        .bg-primary-custom { background-color: var(--bs-primary) !important; color: white; }
+        .text-primary-custom { color: var(--bs-primary) !important; }
+        .navbar-brand img { height: 50px; object-fit: contain; }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand py-0" href="index.html">
+                <img src="assets/logo_nav.jpg" alt="Logo RPC">
+            </a>
+            <div class="ms-auto">
+                <a class="btn btn-outline-secondary btn-sm rounded-pill fw-bold" href="index.html">
+                    <i class="bi bi-arrow-left"></i> Volver al Inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                    <div class="bg-primary-custom text-white text-center py-4">
+                        <i class="bi bi-box2-heart-fill display-3 mb-2 d-block"></i>
+                        <h2 class="fw-bold text-uppercase mb-0">Apoya la Causa</h2>
+                    </div>
+                    <div class="card-body p-4 p-md-5">
+                        <p class="text-center text-muted mb-4 fs-5">Tu aportación mantiene abiertas las puertas de nuestro resguardo. Toda ayuda, monetaria o en especie, transforma vidas.</p>
+                        
+                        <div class="row g-3 mb-4 text-center">
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded h-100 bg-light">
+                                    <h4 class="text-primary-custom fw-bold">$300</h4>
+                                    <small class="text-muted">Kit de higiene personal y ropa</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded h-100 bg-light border-primary">
+                                    <h4 class="text-primary-custom fw-bold">$1,000</h4>
+                                    <small class="text-muted">Alimentación y hospedaje por una semana</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-3 border rounded h-100 bg-light">
+                                    <h4 class="text-primary-custom fw-bold">$2,500</h4>
+                                    <small class="text-muted">Atención psicológica intensiva y legal</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active fw-bold px-4 rounded-pill" id="pills-dinero-tab" data-bs-toggle="pill" data-bs-target="#pills-dinero" type="button" style="background-color: var(--bs-primary);">Donativo Monetario</button>
+                            </li>
+                            <li class="nav-item ms-2" role="presentation">
+                                <button class="nav-link fw-bold px-4 rounded-pill text-dark bg-light border" id="pills-especie-tab" data-bs-toggle="pill" data-bs-target="#pills-especie" type="button">Donativo en Especie</button>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content" id="pills-tabContent">
+                            <!-- Tab Dinero -->
+                            <div class="tab-pane fade show active" id="pills-dinero" role="tabpanel">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Cantidad a donar (MXN)</label>
+                                        <input type="number" class="form-control" placeholder="Ej. 500" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Tipo de donativo</label>
+                                        <select class="form-select">
+                                            <option>Una sola vez</option>
+                                            <option>Mensual recurrente</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold">Datos de Contacto (Para emitir recibo deducible)</label>
+                                        <input type="text" class="form-control mb-2" placeholder="Nombre completo o Empresa">
+                                        <input type="email" class="form-control" placeholder="Correo electrónico">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 fw-bold rounded-pill p-3 fs-5" style="background-color: var(--bs-primary); border: none;">
+                                        Continuar al Pago Seguro <i class="bi bi-lock-fill ms-1"></i>
+                                    </button>
+                                    <p class="text-center small text-muted mt-3">Transferencia SPEI, Tarjeta de Crédito/Débito. Todo es seguro.</p>
+                                </form>
+                            </div>
+                            
+                            <!-- Tab Especie -->
+                            <div class="tab-pane fade" id="pills-especie" role="tabpanel">
+                                <p class="text-muted">Aceptamos donativos en especie como: artículos de higiene (toallas sanitarias, jabón, pañales), alimentos no perecederos y ropa en buen estado.</p>
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">¿Qué te gustaría donar?</label>
+                                        <textarea class="form-control" rows="3" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Tu Correo o Teléfono para coordinar entrega</label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-dark w-100 fw-bold rounded-pill p-3">
+                                        Enviar Propuesta de Donativo
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Pequeño script para alternar estilos de los botones de los tabs visualmente
+        const dineroTab = document.getElementById('pills-dinero-tab');
+        const especieTab = document.getElementById('pills-especie-tab');
+        
+        dineroTab.addEventListener('click', () => {
+            dineroTab.style.backgroundColor = 'var(--bs-primary)';
+            dineroTab.style.color = 'white';
+            especieTab.style.backgroundColor = '#f8f9fa';
+            especieTab.style.color = '#2c2a2b';
+        });
+        
+        especieTab.addEventListener('click', () => {
+            especieTab.style.backgroundColor = 'var(--bs-primary)';
+            especieTab.style.color = 'white';
+            dineroTab.style.backgroundColor = '#f8f9fa';
+            dineroTab.style.color = '#2c2a2b';
+        });
+    </script>
+</body>
+</html>

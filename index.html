@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación RPC - Espacio Seguro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Custom Colors from Palette */
+        :root {
+            --bs-primary: #997277;
+            --bs-secondary: #ae8a8c;
+            --bs-info: #ccbeb5;
+            --bs-dark: #2c2a2b;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+            color: var(--bs-dark);
+        }
+
+        .bg-primary-custom { background-color: var(--bs-primary) !important; color: white; }
+        .text-primary-custom { color: var(--bs-primary) !important; }
+        
+        .bg-secondary-custom { background-color: var(--bs-secondary) !important; color: white; }
+        .text-secondary-custom { color: var(--bs-secondary) !important; }
+
+        .bg-beige-custom { background-color: var(--bs-info) !important; color: var(--bs-dark); }
+        
+        .bg-dark-custom { background-color: var(--bs-dark) !important; color: white; }
+
+        .btn-primary-custom {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+            color: white;
+        }
+        .btn-primary-custom:hover {
+            background-color: #836065;
+            border-color: #836065;
+            color: white;
+        }
+
+        .btn-secondary-custom {
+            background-color: var(--bs-secondary);
+            border-color: var(--bs-secondary);
+            color: white;
+        }
+        .btn-secondary-custom:hover {
+            background-color: #987678;
+            border-color: #987678;
+            color: white;
+        }
+
+        .btn-outline-primary-custom {
+            color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        .btn-outline-primary-custom:hover {
+            background-color: var(--bs-primary);
+            color: white;
+        }
+
+        .hero-section {
+            background-color: var(--bs-info);
+            background-image: linear-gradient(135deg, #ccbeb5 0%, #ffffff 100%);
+            padding: 80px 0;
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand py-0" href="#">
+                <img src="assets/logo_nav.jpg" alt="Logo RPC">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center fw-semibold text-uppercase" style="font-size: 0.9rem; letter-spacing: 0.5px;">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-3" href="#nosotros">¿Quiénes Somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-3" href="#historia">Nuestra Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-3" href="#accion">Rutas de Acción</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-danger px-4 rounded-pill fw-bold shadow-sm" href="ayuda.html">
+                            <i class="bi bi-exclamation-triangle-fill me-1"></i> Ayuda Urgente
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Inicio / Encabezado (Hero Section) -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-center text-lg-start mb-5 mb-lg-0">
+                    <h1 class="display-4 fw-bold text-dark mb-4" style="letter-spacing: -1px;">Un refugio seguro en el momento que más lo necesitas.</h1>
+                    <p class="lead mb-5 text-secondary" style="font-weight: 500;">Brindamos resguardo de emergencia 24/7, contención psicológica y asesoría legal a mujeres e infancias en situación de violencia intrafamiliar.</p>
+                    
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="ayuda.html" class="btn btn-danger btn-lg rounded-pill fw-bold shadow-sm px-4">
+                            🚨 ¿Necesitas ayuda urgente?
+                        </a>
+                        <a href="donar.html" class="btn btn-primary-custom btn-lg rounded-pill fw-bold shadow-sm px-4">
+                            💛 Hacer una Donación
+                        </a>
+                        <a href="voluntariado.html" class="btn btn-outline-primary-custom btn-lg rounded-pill fw-bold bg-white px-4">
+                            🤝 Ser Voluntario
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <img src="assets/logo_main.jpg" alt="Logo Fundación RPC" class="img-fluid rounded-circle shadow" style="max-width: 320px; border: 8px solid white;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. ¿Quiénes Somos? -->
+    <section id="nosotros" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-custom text-uppercase" style="letter-spacing: 1px;">¿Quiénes Somos?</h2>
+                <div class="mx-auto bg-primary-custom mt-3" style="width: 60px; height: 3px;"></div>
+            </div>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <p class="text-center fs-5 text-muted">
+                        Somos la <strong class="text-dark">Fundación Red de Resguardo y Protección Ciudadana, A.C. (RPC)</strong>, una organización dedicada a erradicar la desprotección de mujeres, niñas y niños en situación de violencia crítica. A través de nuestro proyecto <strong class="text-primary-custom">"Espacio Seguro"</strong>, operamos casas de resguardo temporal e itinerante que brindan un entorno de protección confidencial, digno y gratuito de primera línea mientras se procesan las vías legales con el Estado.
+                    </p>
+                </div>
+            </div>
+
+            <h4 class="text-center mb-5 fw-bold text-dark">Nuestro Equipo Multidisciplinario</h4>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm bg-light text-center p-4 card-hover rounded-4">
+                        <div class="mb-3">
+                            <i class="bi bi-diagram-3-fill fs-1 text-primary-custom"></i>
+                        </div>
+                        <h5 class="fw-bold text-dark">Dirección Ejecutiva</h5>
+                        <p class="text-muted small mb-0">Coordinación estratégica y gestión institucional.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm bg-light text-center p-4 card-hover rounded-4">
+                        <div class="mb-3">
+                            <i class="bi bi-shield-lock-fill fs-1 text-primary-custom"></i>
+                        </div>
+                        <h5 class="fw-bold text-dark">Seguridad</h5>
+                        <p class="text-muted small mb-0">Resguardo físico confidencial y logística 24/7.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm bg-light text-center p-4 card-hover rounded-4">
+                        <div class="mb-3">
+                            <i class="bi bi-heart-pulse-fill fs-1 text-primary-custom"></i>
+                        </div>
+                        <h5 class="fw-bold text-dark">Salud Mental</h5>
+                        <p class="text-muted small mb-0">Psicólogas/os de crisis y especialistas en trauma e infancia.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm bg-light text-center p-4 card-hover rounded-4">
+                        <div class="mb-3">
+                            <i class="bi bi-bank fs-1 text-primary-custom"></i>
+                        </div>
+                        <h5 class="fw-bold text-dark">Área Jurídica</h5>
+                        <p class="text-muted small mb-0">Abogadas/os para denuncias, órdenes de protección y enlace institucional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Nuestra Historia -->
+    <section id="historia" class="py-5 bg-beige-custom position-relative">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 bg-white p-5 rounded-4 shadow-sm text-center">
+                    <i class="bi bi-quote text-primary-custom opacity-50" style="font-size: 4rem; line-height: 0;"></i>
+                    <h2 class="fw-bold text-dark mb-4 text-uppercase" style="letter-spacing: 1px;">Nuestra Historia</h2>
+                    <p class="fs-5 text-muted mb-4 text-start">
+                        La <strong>Fundación Red de Resguardo y Protección Ciudadana (RPC)</strong> nace a partir de la amarga vivencia diaria que sufren miles de familias en México. Nuestra historia se inspira en el dolor y la impotencia ante los innumerables casos donde los servicios públicos de atención no respondieron a tiempo ni de la mejor forma. Nos movilizó ver cómo esa falta de respuesta inmediata obligó a las víctimas a regresar al mismo núcleo de agresión del que intentaban huir, culminando en desenlaces lamentables que pudieron haberse evitado.
+                    </p>
+                    <p class="fs-5 text-muted text-start mb-0">
+                        Frente a esa trágica realidad y a la vulnerabilidad de las primeras 24 a 72 horas, decidimos no ser espectadores. Creamos el proyecto <strong class="text-primary-custom">"Espacio Seguro"</strong> como un refugio de respuesta inmediata 24/7 que actúa antes de que sea demasiado tarde; una puerta abierta para ofrecer resguardo confidencial, contención emocional y la protección que toda mujer, niña y niño merece para no volver jamás al lugar donde su vida corra peligro.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Misión, Visión y Valores -->
+    <section class="py-5 bg-dark-custom text-white">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="mb-5">
+                        <h3 class="fw-bold text-uppercase mb-3" style="color: var(--bs-info);"><i class="bi bi-bullseye me-2"></i>Misión</h3>
+                        <p class="fs-5 text-light fw-light">Garantizar que ninguna mujer ni infancia en México tenga que permanecer en un entorno de riesgo por falta de un refugio, atención psicológica inmediata o justicia accesible, ofreciendo un entorno seguro donde no se sientan obligadas a regresar con su agresor.</p>
+                    </div>
+                    <div>
+                        <h3 class="fw-bold text-uppercase mb-3" style="color: var(--bs-info);"><i class="bi bi-eye-fill me-2"></i>Visión</h3>
+                        <p class="fs-5 text-light fw-light">Ser la ONG referente a nivel nacional en la gestión e innovación de refugios temporales de respuesta rápida, reconocida por consolidar un modelo de resguardo que inspire las políticas públicas de protección integral a mujeres e infancias.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 rounded-4 shadow">
+                        <h3 class="fw-bold text-primary-custom mb-4 text-center"><i class="bi bi-star-fill me-2"></i>Nuestros Valores</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-4 d-flex">
+                                <i class="bi bi-check-circle-fill text-primary-custom fs-4 me-3"></i>
+                                <div>
+                                    <strong class="text-dark d-block mb-1">Confidencialidad Absoluta</strong>
+                                    <span class="text-muted small">Protección rigurosa de la identidad y ubicación de las casas de tránsito.</span>
+                                </div>
+                            </li>
+                            <li class="mb-4 d-flex">
+                                <i class="bi bi-check-circle-fill text-primary-custom fs-4 me-3"></i>
+                                <div>
+                                    <strong class="text-dark d-block mb-1">Cero Revictimización</strong>
+                                    <span class="text-muted small">Atención basada en la empatía, el respeto y la dignidad, libre de juicios de valor.</span>
+                                </div>
+                            </li>
+                            <li class="mb-4 d-flex">
+                                <i class="bi bi-check-circle-fill text-primary-custom fs-4 me-3"></i>
+                                <div>
+                                    <strong class="text-dark d-block mb-1">Respuesta Inmediata</strong>
+                                    <span class="text-muted small">Compromiso operativo 24/7 para actuar con agilidad sin barreras burocráticas.</span>
+                                </div>
+                            </li>
+                            <li class="d-flex">
+                                <i class="bi bi-check-circle-fill text-primary-custom fs-4 me-3"></i>
+                                <div>
+                                    <strong class="text-dark d-block mb-1">Seguridad e Integridad</strong>
+                                    <span class="text-muted small">Protocolos estrictos de protección física y salvaguarda institucional.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Rutas de Acción Rápida -->
+    <section id="accion" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-dark text-uppercase" style="letter-spacing: 1px;">Rutas de Acción Rápida</h2>
+                <div class="mx-auto bg-primary-custom mt-3" style="width: 60px; height: 3px;"></div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Usuarias -->
+                <div class="col-lg-4" id="ayuda">
+                    <div class="card h-100 border-0 shadow rounded-4 overflow-hidden card-hover">
+                        <div class="bg-danger text-white text-center py-4">
+                            <i class="bi bi-exclamation-octagon-fill display-4 mb-2 d-block opacity-75"></i>
+                            <h4 class="mb-0 fw-bold text-uppercase">¿Necesitas Ayuda?</h4>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="fw-bold text-dark text-center mb-4">Si estás en una situación de riesgo, no estás sola.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3 d-flex align-items-start"><i class="bi bi-1-circle-fill text-danger me-2 mt-1"></i> <span class="text-muted">Contáctanos al botón de emergencia.</span></li>
+                                <li class="mb-3 d-flex align-items-start"><i class="bi bi-2-circle-fill text-danger me-2 mt-1"></i> <span class="text-muted">Realizamos una evaluación rápida y confidencial.</span></li>
+                                <li class="d-flex align-items-start"><i class="bi bi-3-circle-fill text-danger me-2 mt-1"></i> <span class="text-muted">Activamos tu ingreso inmediato al resguardo.</span></li>
+                            </ul>
+                            <div class="mt-auto">
+                                <div class="bg-danger bg-opacity-10 rounded p-3 text-center border border-danger border-opacity-25 mb-3">
+                                    <span class="d-block small text-danger fw-bold mb-1">Línea de Emergencia 24/7</span>
+                                    <a href="tel:+521234567890" class="fs-4 text-danger text-decoration-none fw-bold">415 123 4567</a>
+                                </div>
+                                <p class="text-muted small text-center mb-0"><i class="bi bi-shield-lock-fill text-success"></i> Tu ubicación y datos están totalmente protegidos por ley.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voluntarios -->
+                <div class="col-lg-4" id="voluntario">
+                    <div class="card h-100 border-0 shadow rounded-4 overflow-hidden card-hover">
+                        <div class="bg-secondary-custom text-white text-center py-4">
+                            <i class="bi bi-person-hearts display-4 mb-2 d-block opacity-75"></i>
+                            <h4 class="mb-0 fw-bold text-uppercase">Sé Parte del Cambio</h4>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-muted text-center mb-4">Buscamos personas comprometidas con los derechos humanos y la protección de las familias.</p>
+                            
+                            <h6 class="fw-bold text-secondary-custom border-bottom pb-2">Perfiles requeridos:</h6>
+                            <ul class="small text-muted mb-3">
+                                <li><strong>Profesionales:</strong> Psicólogos, Abogados, Trabajadores sociales.</li>
+                                <li><strong>Apoyo:</strong> Terapeutas, talleristas de arte.</li>
+                                <li><strong>Logística:</strong> Servicio Social, acopio.</li>
+                            </ul>
+                            
+                            <h6 class="fw-bold text-secondary-custom border-bottom pb-2">Proceso de Ingreso:</h6>
+                            <ul class="small text-muted">
+                                <li>Formulario en línea y entrevista de alineación.</li>
+                                <li>Capacitación en confidencialidad y crisis.</li>
+                            </ul>
+                            <div class="mt-auto pt-3">
+                                <a href="voluntariado.html" class="btn btn-secondary-custom fw-bold w-100 rounded-pill shadow-sm">
+                                    <i class="bi bi-envelope-fill me-2"></i>Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Donantes -->
+                <div class="col-lg-4" id="donar">
+                    <div class="card h-100 border-0 shadow rounded-4 overflow-hidden card-hover">
+                        <div class="bg-primary-custom text-white text-center py-4">
+                            <i class="bi bi-box2-heart-fill display-4 mb-2 d-block opacity-75"></i>
+                            <h4 class="mb-0 fw-bold text-uppercase">Apoya la Causa</h4>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <p class="text-muted text-center mb-4">Tu aportación financiera o en especie mantiene abiertas las puertas del resguardo.</p>
+                            
+                            <h6 class="fw-bold text-primary-custom border-bottom pb-2">Impacto de tu donativo:</h6>
+                            <ul class="small text-muted mb-4">
+                                <li class="mb-2"><strong class="text-dark">$300 MXN:</strong> Kit de higiene y ropa para una familia.</li>
+                                <li class="mb-2"><strong class="text-dark">$1,000 MXN:</strong> Alimentos y hospedaje semanal.</li>
+                                <li><strong class="text-dark">$2,500 MXN:</strong> Atención psicológica y legal.</li>
+                            </ul>
+                            
+                            <div class="mt-auto pt-3">
+                                <a href="donar.html" class="btn btn-primary-custom fw-bold w-100 rounded-pill shadow-sm mb-2">
+                                    <i class="bi bi-cash-coin me-2"></i>Hacer Donación
+                                </a>
+                                <p class="small text-center text-muted mb-0">SPEI, Tarjetas o donativos en especie.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-white border-top">
+        <div class="container py-4">
+            <h3 class="text-center fw-bold text-dark mb-4">Preguntas Frecuentes</h3>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush shadow-sm border rounded" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-primary-custom" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    ¿Es seguro contactarlos si mi agresor vigila mis dispositivos?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Te recomendamos llamarnos desde un teléfono público, el teléfono de alguien de extrema confianza o borrar el historial de llamadas y mensajes inmediatamente después de contactarnos. Nuestra línea es confidencial.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-primary-custom" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    ¿Puedo llevar a mis hijos/as conmigo?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Sí, totalmente. Nuestro espacio está acondicionado para recibir a mujeres y sus infancias, garantizando también contención y seguridad para ellas/os.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold text-primary-custom" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    ¿Tiene algún costo recibir refugio o asesoría legal?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    No. Todos nuestros servicios, incluyendo el alojamiento de emergencia, alimentación, atención psicológica y asesoría jurídica, son completamente gratuitos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="bg-dark-custom text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row gy-4 mb-4 border-bottom border-secondary pb-4">
+                <div class="col-lg-4 text-center text-lg-start">
+                    <!-- Agregué bg-white p-1 al logo para que resalte y no se pierda -->
+                    <div class="bg-white d-inline-block p-2 rounded mb-3">
+                        <img src="assets/logo_nav.jpg" alt="Logo RPC Footer" style="height: 50px;">
+                    </div>
+                    <p class="text-light opacity-75 small pe-lg-4">Erradicando la desprotección de mujeres, niñas y niños en situación de violencia crítica a través del resguardo inmediato.</p>
+                </div>
+                <div class="col-lg-4 text-center text-lg-start">
+                    <h5 class="fw-bold mb-3 text-white">Contacto</h5>
+                    <ul class="list-unstyled text-light opacity-75 small">
+                        <li class="mb-2"><i class="bi bi-telephone-fill me-2 text-primary-custom"></i> Atención: [Insertar Teléfono]</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill me-2 text-primary-custom"></i> contacto@fundacionrpc.org</li>
+                        <li><i class="bi bi-geo-alt-fill me-2 text-primary-custom"></i> San Miguel de Allende, Guanajuato.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-dark p-3 rounded border border-secondary text-center text-lg-start h-100 d-flex flex-column justify-content-center">
+                        <p class="text-warning small mb-0 fw-bold">
+                            <i class="bi bi-shield-lock-fill me-1"></i> Aviso de Seguridad
+                        </p>
+                        <p class="text-light opacity-75 small mt-2 mb-0">
+                            Por la seguridad e integridad de las usuarias y sus familias, las direcciones físicas de nuestras casas de tránsito se mantienen estrictamente confidenciales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="text-light opacity-75 small mb-0">&copy; 2026 Red de Resguardo y Protección Ciudadana, A.C. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-light opacity-75 text-decoration-none small me-3 hover-white"><i class="bi bi-file-earmark-lock"></i> Aviso de Privacidad</a>
+                    <a href="#" class="text-light opacity-75 text-decoration-none small hover-white"><i class="bi bi-file-earmark-text"></i> Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
